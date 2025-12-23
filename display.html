@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pictograms</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='Pictogram.ico') }}">
+    <style>
+        body {
+            background-color: #377ed5; /* Light blue */
+            font-family: 'Times New Roman', Times, serif;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #080a0b;
+            text-align: start;
+        }
+
+        input{
+            padding: 10px;
+            margin: 10px;
+            border-radius: 8px;
+            border: 1px solid #f9f6f6;
+        }
+        button{
+            padding: 5px;
+            margin: 5px;
+            border-radius: 8px;
+            border: 2px solid #100f0f;
+        }
+
+        img {
+            margin: 10px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>👉🏻👉🏻</h2>
+    <form        <input type="text" name="sentence" placeholder="....." required>
+        <button type="@Send..">😍</button>
+    </form>
+ method="POST">
+
+    <h2>Pictograms:</h2>
+    {% for image in images %}
+        <img src="{{ url_for('static', filename=image) }}" alt="{{ image }}" style="width:200px;height:200px;">
+    {% endfor %}
+</body>
+</html>
